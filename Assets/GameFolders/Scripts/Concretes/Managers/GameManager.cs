@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private int score;
     public static GameManager instance { get; private set; }
 
     private void Awake()
@@ -22,6 +23,11 @@ public class GameManager : MonoBehaviour
 
         else
             Destroy(this.gameObject);
+    }
+
+    public void IncreaseScore()
+    {
+        score += 10;
     }
 
     public void RestartGame()
