@@ -34,15 +34,30 @@ public class GameManager : MonoBehaviour
         OnScoreChanged?.Invoke(score);
     }
 
-    public void RestartGame()
+    public void StartGame()
     {
         score = 0;
         Time.timeScale = 1f;
-        StartCoroutine(RestartGameCoroutine());
+        StartCoroutine(StartGameCoroutine());
     }
 
-    private IEnumerator RestartGameCoroutine()
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    private IEnumerator StartGameCoroutine()
     {
         yield return SceneManager.LoadSceneAsync("Level1");
+    }
+
+    public void ReturnMenu()
+    {
+        StartCoroutine(ReturnMenuAsync());
+    }
+
+    public IEnumerator ReturnMenuAsync()
+    {
+        yield return SceneManager.LoadSceneAsync("Menu");
     }
 }
