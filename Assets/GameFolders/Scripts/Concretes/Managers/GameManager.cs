@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("Score")]
     [SerializeField] private int score;
+
     public static GameManager instance { get; private set; }
+    public event System.Action<int> OnScoreChanged;
 
     private void Awake()
     {
@@ -28,10 +31,13 @@ public class GameManager : MonoBehaviour
     public void IncreaseScore()
     {
         score += 10;
+        OnScoreChanged?.Invoke(score);
     }
 
     public void RestartGame()
     {
+        score = 0;
+        Time.timeScale = 1f;
         StartCoroutine(RestartGameCoroutine());
     }
 
