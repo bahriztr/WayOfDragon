@@ -20,10 +20,14 @@ namespace Controllers
         private bool _isLeftMouseClicked;
         private bool _isRightMouseClicked;
 
+        [Header("Audio")]
+        private AudioSource _audioSource;
+
         private void Awake()
         {
             _rb = GetComponent<Rigidbody2D>();
             _jump = GetComponent<Jump>();
+            _audioSource = GetComponent<AudioSource>();
             _launchProjectile = GetComponent<LaunchProjectile>();
             _input = new PcInputController();
         }
@@ -53,7 +57,7 @@ namespace Controllers
             if (_isLeftMouseClicked)
             {
                 _jump.JumpAction(_rb);
-
+                _audioSource.Play();
                 _isLeftMouseClicked = false;
             }
         }
@@ -66,11 +70,6 @@ namespace Controllers
 
                 _isRightMouseClicked = false;
             }
-        }
-
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            GameManager.instance.RestartGame();
         }
     }
 }
