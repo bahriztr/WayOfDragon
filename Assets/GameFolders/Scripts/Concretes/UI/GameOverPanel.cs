@@ -8,12 +8,12 @@ namespace UI
     {
         public void YesButtonClick()
         {
-            GameManager.instance.RestartGame();
+            GameManager.instance.StartGame();
         }
 
         public void NoButtonClick()
         {
-            Debug.Log("No Button Clicked.");
+            GameManager.instance.ReturnMenu();
         }
     }
 }
