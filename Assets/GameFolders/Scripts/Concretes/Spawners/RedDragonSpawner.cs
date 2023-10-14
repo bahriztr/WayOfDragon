@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using Controllers;
 using Abstract.Spawners;
+using Pools;
 
 public class RedDragonSpawner : BaseSpawner
 {
     [Space(3f)]
     [Header("Enemy")]
-    [SerializeField] private EnemyController enemy;
+    [SerializeField] private Controllers.ObstacleController enemy;
 
     protected override void Spawn()
     {
-        Instantiate(enemy, this.transform);
+        Controllers.ObstacleController newEnemy = RedDragonPool.instance.Get();
+        newEnemy.transform.position = this.transform.position;
+        newEnemy.gameObject.SetActive(true);
     }
 }
