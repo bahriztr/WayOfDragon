@@ -9,14 +9,20 @@ namespace Controllers
     {
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            EnemyController enemy = collision.GetComponent<EnemyController>();
+            ObstacleController enemy = collision.GetComponent<ObstacleController>();
 
             if(enemy != null)
             {
                 GameManager.instance.IncreaseScore();
-                Destroy(collision.gameObject);
-                Destroy(this.gameObject);
+                enemy.KillGameObject();
             }
+
+            KillGameObject();
+        }
+
+        public override void KillGameObject()
+        {
+            Destroy(this.gameObject);
         }
     }
 }
