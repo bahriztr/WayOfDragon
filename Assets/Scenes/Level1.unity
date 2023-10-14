@@ -337,6 +337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RedDragonSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 2486897396451741410, guid: c1d517792200e8c498854345a5f92d08, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2486897396451741411, guid: c1d517792200e8c498854345a5f92d08, type: 3}
       propertyPath: maxSpawnTime
       value: 4.2
@@ -437,6 +441,10 @@ PrefabInstance:
     - target: {fileID: 2486897396451741410, guid: c1d517792200e8c498854345a5f92d08, type: 3}
       propertyPath: m_Name
       value: RedDragonSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 2486897396451741410, guid: c1d517792200e8c498854345a5f92d08, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2486897396451741411, guid: c1d517792200e8c498854345a5f92d08, type: 3}
       propertyPath: maxSpawnTime
@@ -666,6 +674,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2397221924248827948, guid: 459361cbb3d4947c7ae7bac69e0a70f6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3684153908779910181, guid: 459361cbb3d4947c7ae7bac69e0a70f6, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -726,6 +738,10 @@ PrefabInstance:
     - target: {fileID: 2486897396451741410, guid: c1d517792200e8c498854345a5f92d08, type: 3}
       propertyPath: m_Name
       value: RedDragonSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 2486897396451741410, guid: c1d517792200e8c498854345a5f92d08, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2486897396451741412, guid: c1d517792200e8c498854345a5f92d08, type: 3}
       propertyPath: m_RootOrder
