@@ -21,7 +21,7 @@ namespace Movements
         {
             _rb = GetComponent<Rigidbody2D>();
         }
-        void Start()
+        void OnEnable()
         {
             MoveEnemy();
         }
