@@ -8,7 +8,7 @@ namespace Abstract.Controllers
     {
         [Header("Timer")]
         [SerializeField] private float maxLifeTime = 5f;
-        private float _currentTime;
+        protected float _currentTime;
 
         void Update()
         {
@@ -21,9 +21,11 @@ namespace Abstract.Controllers
         {
             if (_currentTime >= maxLifeTime)
             {
-                Destroy(this.gameObject);
+                KillGameObject();
             }
         }
+
+        public abstract void KillGameObject();
     }
 }
 
